@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Bean - Constructor Injection -->
+    <bean id="addressBean" class="com.EmployeeManagementSystem.Pojo.Address">
+        <constructor-arg type="int"    value="1"/>
+        <constructor-arg type="String" value="Bangalore"/>
+        <constructor-arg type="String" value="Karnataka"/>
+        <constructor-arg type="String" value="India"/>
+        <constructor-arg type="int"    value="560001"/>
+    </bean>
+
+    <!-- Employee Bean - Setter Injection -->
+    <bean id="employeeBean" class="com.EmployeeManagementSystem.Pojo.Employee">
+        <property name="id"       value="101"/>
+        <property name="name"     value="Mike"/>
+        <property name="email"    value="mike@gmail.com"/>
+        <property name="password" value="mike@123"/>
+        <property name="age"      value="28"/>
+        <property name="salary"   value="60000"/>
+        <property name="address"  ref="addressBean"/>
+    </bean>
+
+    <!-- EmployeeService Bean - Setter Injection -->
+    <bean id="employeeServiceBean" class="com.EmployeeManagementSystem.Service.EmployeeServiceImpl">
+        <property name="employee" ref="employeeBean"/>
+    </bean>
+
+</beans>
