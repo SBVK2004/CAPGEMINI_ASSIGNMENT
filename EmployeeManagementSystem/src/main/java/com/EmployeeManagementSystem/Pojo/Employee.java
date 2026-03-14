@@ -10,10 +10,9 @@ public class Employee {
     private double salary;
     private Address address;
 
-    // Default constructor (required for setter injection)
+  
     public Employee() {}
 
-    // Getters
     public int getId()          { return id; }
     public String getName()     { return name; }
     public String getEmail()    { return email; }
@@ -22,7 +21,7 @@ public class Employee {
     public double getSalary()   { return salary; }
     public Address getAddress() { return address; }
 
-    // Setters - used for Setter Injection by Spring
+   
     public void setId(int id)             { this.id = id; }
     public void setName(String name)      { this.name = name; }
     public void setEmail(String email)    { this.email = email; }
