@@ -2,17 +2,17 @@ package com.EmployeeManagementSystem.Service;
 
 import com.EmployeeManagementSystem.Pojo.Employee;
 
-// use your actual package name
+
 
 public class EmployeeServiceImpl implements EmployeeService {
 
-    // Employee object injected by Spring IoC (Setter Injection)
+   
     private Employee employee;
 
-    // Default constructor
+
     public EmployeeServiceImpl() {}
 
-    // Setter for Spring IoC injection
+
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
