@@ -9,7 +9,7 @@ public class Address {
     private String country;
     private int pincode;
 
-    // Constructor Injection - used by Spring XML
+   
     public Address(int id, String city, String state, String country, int pincode) {
         this.id = id;
         this.city = city;
@@ -18,14 +18,13 @@ public class Address {
         this.pincode = pincode;
     }
 
-    // Getters
+
     public int getId()       { return id; }
     public String getCity()  { return city; }
     public String getState() { return state; }
     public String getCountry() { return country; }
     public int getPincode()  { return pincode; }
 
-    // Setters
     public void setId(int id)             { this.id = id; }
     public void setCity(String city)      { this.city = city; }
     public void setState(String state)    { this.state = state; }
